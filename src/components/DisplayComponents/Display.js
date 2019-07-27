@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Display = () => {
-    return <div > < /div>;
+    const [dispayedNum, setDisplayedNum] = useState(0);
+    return <div > { dispayedNum } < /div>;
 };
 
 export default Display;

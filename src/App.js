@@ -6,7 +6,10 @@ import Display from "../src/components/DisplayComponents/Display"
 import Specials from "./components/ButtonComponents/SpecialButtons/Specials"
 import Numbers from "./components/ButtonComponents/NumberButtons/Numbers"
 import Operators from "./components/ButtonComponents/OperatorButtons/Operators"
-import Data from "./data"
+import { numbers }from "./data"
+import { operators } from "./data"
+import { specials } from "./data"
+
 // STEP 4 - import the button and display components
 // Don't forget to import any extra css/scss files you build into the correct component
 
@@ -15,7 +18,7 @@ import Logo from "./components/DisplayComponents/Logo";
 
 function App() {
 
-  const operatorData = Data.operators.map(el => el.char);
+  const operatorChar = operators.map(el => el.char);
     
   // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
   // Once the state hooks are in place write some functions to hold data in state and update that data depending on what it needs to be doing
@@ -29,9 +32,10 @@ function App() {
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
         <LambdaLogo />
         <Display />
-        <Numbers numbers={Data.numbers}  />
-        <Operators operator={operatorData}/> 
-        <Specials specialBtn={Data.specials} />
+        <Specials specialBtn={specials} />
+        <Numbers numbers={numbers}  />
+        <Operators operator={operatorChar} /> 
+        
       </div>
     </div>
   );
