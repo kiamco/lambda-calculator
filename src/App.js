@@ -30,12 +30,16 @@ function App() {
       <Logo />
       <div className="App">
         {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
-        <LambdaLogo />
         <Display />
-        <Specials specialBtn={specials} />
-        <Numbers numbers={numbers}  />
-        <Operators operator={operatorChar} /> 
-        
+        <div className="btns">
+          <div className="btn-left-container">
+            <Specials specialBtn={specials} />
+            <Numbers numbers={numbers} />
+          </div>
+          <div className="btn-right-container">
+            <Operators operator={operatorChar} /> 
+          </div>
+        </div>
       </div>
     </div>
   );

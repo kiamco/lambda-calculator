@@ -11,7 +11,7 @@ const Specials = (props) => {
   return (
     <div className="specials">
       {
-        spButton.map(el => <SpecialButton specialBtn={el} />)
+        spButton.map((el, index) => <SpecialButton specialBtn={el} index={index} />)
       }
     </div>
   );

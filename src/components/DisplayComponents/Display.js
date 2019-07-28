@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 
-const Display = () => {
+const Display = (props) => {
     const [dispayedNum, setDisplayedNum] = useState(0);
-    return (<div > { dispayedNum } </div>);
+    return (
+    <div className="display"> 
+        <p>{dispayedNum}</p> 
+    </div>
+    
+    );
 };
 
 export default Display;
