@@ -1,5 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Display = () => {
-  return <div>{/* Display any props data here */}</div>;
+const Display = (props) => {
+    const [dispayedNum, setDisplayedNum] = useState(0);
+    return (
+    <div className="display"> 
+        <p>{dispayedNum}</p> 
+    </div>
+    
+    );
 };
+
+export default Display;
